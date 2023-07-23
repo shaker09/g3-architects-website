@@ -20,6 +20,13 @@
     font-size: 1rem;
     font-weight: 400;
 }
+
+.section-title{
+    color: #131313;
+    font-weight: 700;
+    font-size: 2.8rem;
+}
+
 /* header styles */
 header{
     background: rgba(255, 144, 14, 0.10);
@@ -30,11 +37,7 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
-.nav-title{
-    color: #131313;
-    font-weight: 700;
-    font-size: 2.8rem;
-}
+
 nav > ul{
     display: flex;
 }
@@ -97,6 +100,46 @@ main{
     font-weight: 700;
 }
 
+/* facts part styles */
+.facts-card-container{
+    display: flex;
+    justify-content: space-around;
+}
+.facts-card-container .card{
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding: 30px;
+}
+.facts-card-container .card-stats{
+    color:#424242;
+    font-size: 2.85rem;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.facts-card-container .card-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 5px;
+}
+
+/* sponsors styles part */
+
+.sponsors{
+    text-align: center;
+}
+.sponsors-img-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+}
+.sponsors-img-container img{
+    width: 165px;
+}
+
 /* responsive media queries part */
 /* for small device like mobile */
 
@@ -104,15 +147,24 @@ main{
     header{
         padding: 20px;
     }
-    nav , .teams-container{
+    nav , 
+    .teams-container,
+    .facts-card-container,
+    .sponsors-img-container
+    {
         flex-direction: column;
     }
     .teams-img-container{
         grid-template-columns: 1fr;
     }
-    .teams-context{
+    .teams-context,
+    .facts-card-container
+    {
         padding-left: 20px;
         padding-right: 20px;
+    }
+    .facts-card-container{
+        gap: 20px;
     }
 }
 
@@ -122,7 +174,10 @@ main{
     header{
         padding: 50px;
     }
-    nav, .teams-container{
+    nav,
+    .teams-container,
+    .sponsors-img-container
+    {
         flex-direction: column;
     }
 }
